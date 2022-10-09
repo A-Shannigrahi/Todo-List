@@ -1,0 +1,17 @@
+<div class="contanier my-3">
+
+<p>Add A new thing to Do</p>
+
+<form (ngSubmit)="OnSubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">ToDo Title</label>
+      <input type="text" [(ngModel)]="title" class="form-control" name="title" id="title" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Title description</label>
+      <input type="text" [(ngModel)]="description" class="form-control" name="description" id="description">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>

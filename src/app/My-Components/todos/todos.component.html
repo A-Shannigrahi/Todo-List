@@ -1,0 +1,20 @@
+
+<!--<p>List of All Items</p>
+<ul *ngFor="let t of todosarray">
+    <li>{{t.sno}} : {{t.title}} -> {{t.description}}
+    </li>
+</ul>
+-->
+
+
+
+<div class="container my-3">
+<H2>Things To Do</H2>
+
+<app-add-todo (todoAdd)="OnAdd($event)"></app-add-todo>
+
+<div *ngFor="let todo of todosarray;index as i">
+    <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodoFunc($event)"  (todoCheck)="onToggleCheck($event)"></app-todo-item>
+</div>
+
+</div>
